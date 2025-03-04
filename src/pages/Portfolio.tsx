@@ -7,6 +7,7 @@ import techcreator from '../images/techcreator.png'
 import lf from '../images/lf.png'
 import move from '../images/move.jpg'
 import global from '../images/global.jpg'
+import { Link } from 'react-router-dom';
 
 
 const Portfolio = () => {
@@ -188,16 +189,12 @@ const Portfolio = () => {
             >
               Let's discuss your project and create something amazing
             </motion.p>
-            <motion.a
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get in Touch
-            </motion.a>
+            </Link>
           </div>
         </div>
       </section>

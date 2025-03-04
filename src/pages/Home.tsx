@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Code, Layout } from 'lucide-react';
 import ishaq from "../images/ishaq.png"
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -36,13 +37,13 @@ const Home = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6 }}
             >
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Hire Me
                 <ArrowRight className="ml-2" size={20} />
-              </a>
+              </Link>
             </motion.div>
           </div>
           <motion.div
