@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,13 +11,39 @@ const Contact = () => {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [showMessage, setShowMessage] = useState(false);
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+
+    // EmailJS configuration
+    const serviceID = 'service_3ip4sum';
+    const templateID = 'template_l4w4oih';
+    const userID = 'UTd7P8j2yf4pl6MGx';
+
+    emailjs.send(serviceID, templateID, formData, userID)
+      .then((response) => {
+        console.log('Email sent successfully!', response);
+        // Show success message
+        setShowMessage(true);
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+        // Hide message after 5 seconds
+        setTimeout(() => {
+          setShowMessage(false);
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -25,7 +52,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 relative">
+      {/* Success Message */}
+      {showMessage && (
+        <div className="fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50">
+          Message sent successfully!
+        </div>
+      )}
+
       {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0 }}
