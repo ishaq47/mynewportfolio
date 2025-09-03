@@ -35,7 +35,7 @@ const About = () => {
       description: 'Architected and developed a high-fidelity replica of the Tamasha App using Laravel for dynamic view rendering, delivering a robust and engaging user experience. Collaborated closely with cross-functional teams to ensure scalable, efficient, and visually appealing front-end solutions.',
     },
     {
-      title: 'Frontend Web Developer',
+      title: 'Frontend Web Developer ',
       company: 'ObsidianPM Abbottabad',
       period: 'Mar 2025 - Present',
       description: 'Currently leading the front-end development of a sophisticated Medical Billing Web Application using React.js and Material-UI (MUI). Designing and implementing intuitive, high-performance interfaces to streamline medical billing processes, while ensuring scalability and adherence to industry standards.',
