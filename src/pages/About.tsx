@@ -23,18 +23,24 @@ const About = () => {
 
   const experiences = [
     {
-      title: 'Mern Stack developer',
-      company: 'Tech Creator Swabi.',
+      title: 'Frontend Web Developer',
+      company: 'Tech Creator Swabi',
       period: '2023 - Dec 2024',
-      description: 'Developed and maintained multiple client projects using modern web technologies',
+      description: 'Spearheaded the development and maintenance of diverse client projects, leveraging modern web technologies including React.js, Material-UI (MUI), and Tailwind CSS to deliver responsive, user-centric interfaces. Contributed to backend development using Node.js, enhancing full-stack capabilities and ensuring seamless integration of front-end and back-end functionalities.',
     },
     {
       title: 'Frontend Web Developer',
-      company: 'Ideation Islamabad.',
-      period: '2025 - Present',
-      description: 'Developing and maintaining multiple client projects using modern web technologies.',
+      company: 'Ideation Islamabad',
+      period: 'Jan 2025 - Mar 2025',
+      description: 'Architected and developed a high-fidelity replica of the Tamasha App using Laravel for dynamic view rendering, delivering a robust and engaging user experience. Collaborated closely with cross-functional teams to ensure scalable, efficient, and visually appealing front-end solutions.',
+    },
+    {
+      title: 'Frontend Web Developer',
+      company: 'ObsidianPM Abbottabad',
+      period: 'Mar 2025 - Present',
+      description: 'Currently leading the front-end development of a sophisticated Medical Billing Web Application using React.js and Material-UI (MUI). Designing and implementing intuitive, high-performance interfaces to streamline medical billing processes, while ensuring scalability and adherence to industry standards.',
     }
-  ];
+];
 
   return (
     <div className="pt-16">
@@ -89,7 +95,7 @@ const About = () => {
                 className="bg-white rounded-lg p-6 shadow-lg"
               >
                 <div className="flex items-center mb-4">
-                  <div className="text-blue-600 mr-3">{skill.icon}</div>
+                 
                   <h3 className="text-xl font-semibold">{skill.name}</h3>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
