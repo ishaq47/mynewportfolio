@@ -6,6 +6,8 @@ import kkra from '../images/kkra.jpg';
 import techcreator from '../images/techcreator.png'
 import lf from '../images/lf.png'
 import move from '../images/move.jpg'
+import madrasa from '../images/madrasa.png'
+import darlingshare from '../images/darlingshare.png'
 import global from '../images/global.jpg'
 import { Link } from 'react-router-dom';
 
@@ -50,6 +52,7 @@ const Portfolio = () => {
       githubUrl: "#",
       category: "Web App"
     },
+
     
     {
       title: "Tech Creator",
@@ -69,7 +72,25 @@ const Portfolio = () => {
       liveUrl: "https://www.myreeldream.ai/",
       githubUrl: "#",
       category: "Web App"
-    }
+    },
+    {
+  title: "Website for Madrasa Services",
+  description: "A MERN stack web application for managing madrasa services online. Users can ask questions related to Fatwa, Islamic guidance, or general inquiries, while the admin/owner can respond through the admin panel. The system also allows management of users, news, and announcements.",
+  image: madrasa,
+  technologies: ["React", "Node.js", "Express.js", "MongoDB"],
+  liveUrl: "https://jamiafrontend-henna.vercel.app",
+  githubUrl: "#",
+  category: "Web App"
+},
+{
+  title: "DarlingShare",
+  description: "A MERN stack file sharing application that allows users to send and receive files instantly by scanning QR codes. Built with a modern Tailwind CSS interface, it provides a fast, secure, and user-friendly way to transfer files across devices.",
+  image: darlingshare,
+  technologies: ["React", "Node.js", "Express.js", "MongoDB"],
+  liveUrl: "https://darlingshare.vercel.app",
+  githubUrl: "#",
+  category: "Web App"
+},
     
   ];
 

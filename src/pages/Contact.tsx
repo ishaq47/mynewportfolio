@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import emailjs from 'emailjs-com';
@@ -100,7 +100,7 @@ const Contact = () => {
             >
               <Mail className="w-12 h-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Email</h3>
-              <a href='mailto:mik9649820@gmail.com'><p className="text-gray-600">mik9649820@gmail.com</p></a>
+              <a href='mailto:muhammad.ishaq.pro@gmail.com'><p className="text-gray-600">muhammad.ishaq.pro@gmail.com</p></a>
             </motion.div>
             <motion.div
               initial={{ y: 20, opacity: 0 }}
@@ -111,7 +111,7 @@ const Contact = () => {
             >
               <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Phone</h3>
-             <a href='tel:+923018849473'><p className="text-gray-600">+92 301 8849473</p></a>
+             <a href='tel:+923018849473'><p className="text-gray-600">+92 344 1898887</p></a>
             </motion.div>
             <motion.div
               initial={{ y: 20, opacity: 0 }}
