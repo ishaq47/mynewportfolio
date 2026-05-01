@@ -78,20 +78,32 @@ const Home = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5 }}
-            className="relative flex justify-center"
-          >
-            <div className="absolute w-80 h-80 bg-blue-500/20 blur-3xl rounded-full"></div>
+         <motion.div
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ delay: 0.5 }}
+  className="relative flex justify-center items-center"
+>
 
-            <img
-              src={ishaq}
-              alt="Ishaq"
-              className="relative w-72 md:w-96 rounded-2xl shadow-2xl border border-white/10 hover:scale-105 transition duration-500"
-            />
-          </motion.div>
+  {/* outer glow */}
+  <div className="absolute w-96 h-96 bg-gradient-to-r from-blue-500/30 to-indigo-500/30 blur-3xl rounded-full animate-pulse"></div>
+
+  {/* rotating gradient ring */}
+  <div className="absolute w-[340px] h-[340px] rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 animate-spin-slow opacity-30"></div>
+
+  {/* glass frame */}
+  <div className="relative p-3 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl">
+
+    {/* image */}
+    <motion.img
+      src={ishaq}
+      alt="Ishaq"
+      whileHover={{ scale: 1.05, rotate: 1 }}
+      transition={{ type: "spring", stiffness: 200 }}
+      className="w-72 md:w-96 rounded-2xl object-cover shadow-xl"
+    />
+  </div>
+</motion.div>
         </div>
       </section>
 
